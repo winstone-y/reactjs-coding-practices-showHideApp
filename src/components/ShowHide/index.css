@@ -1,0 +1,41 @@
+/* Write your CSS here */
+.bg-container {
+  background-image: linear-gradient(red, pink);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 32px;
+}
+
+.btn-name {
+  color: pink;
+  border-radius: 10px;
+  width: 350px;
+  background-color: white;
+}
+.name {
+  height: 100px;
+  width: 250px;
+  color: black;
+  background-color: #fddddb;
+}
+.hide {
+  display: none;
+}
+.name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
