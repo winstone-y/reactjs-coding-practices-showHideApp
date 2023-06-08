@@ -6,8 +6,6 @@ class ShowHide extends Component {
   state = {
     showFirstName: false,
     showLastName: false,
-    firstClass: '',
-    lastClass: '',
   }
 
   toggleFirstName = () => {
@@ -15,13 +13,10 @@ class ShowHide extends Component {
     if (showFirstName === false) {
       this.setState({
         showFirstName: true,
-
-        firstClass: 'name',
       })
     } else {
       this.setState({
         showFirstName: false,
-        firstClass: 'hide',
       })
     }
   }
@@ -31,23 +26,21 @@ class ShowHide extends Component {
     if (showLastName === false) {
       this.setState({
         showLastName: true,
-        lastClass: 'name',
       })
     } else {
       this.setState({
         showLastName: false,
-        lastClass: 'hide',
       })
     }
   }
 
   render() {
-    const {firstClass, lastClass} = this.state
+    const {showFirstName, showLastName} = this.state
 
     return (
       <div className="bg-container">
         <h1 className="title">Show/Hide</h1>
-        <div>
+        <div className="body">
           <div className="name-container">
             <button
               type="button"
@@ -56,9 +49,7 @@ class ShowHide extends Component {
             >
               Show/Hide Firstname
             </button>
-            <div>
-              <p className={firstClass}>Joe</p>
-            </div>
+            <div>{showFirstName && <p className="name">Joe</p>}</div>
           </div>
           <div className="name-container">
             <button
@@ -68,9 +59,7 @@ class ShowHide extends Component {
             >
               Show/Hide Lastname
             </button>
-            <div>
-              <p className={lastClass}>Jonas</p>
-            </div>
+            <div>{showLastName && <p className="name">Jonas</p>}</div>
           </div>
         </div>
       </div>
